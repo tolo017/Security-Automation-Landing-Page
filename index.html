@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Automated Phishing & Router Audits — Pilot</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Automated Phishing Simulations & Router Audits</h1>
+      <p class="sub">Practical security that reduces breaches and downtime. Pilot-ready for local businesses, banks, and ISPs.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#form">Book a 2‑week pilot</a>
+        <a class="btn outline" id="waBtn" href="https://wa.me/254715460269?text=Hi%20I%27m%20interested%20in%20the%202-week%20security%20pilot." target="_blank" rel="noopener">Message on WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="services">
+      <article class="card">
+        <h2>Phishing Simulation + Awareness</h2>
+        <p>Consent-first simulated phishing campaigns to measure and reduce employee risk. Includes PDF report and a 20–30 minute awareness session.</p>
+        <ul>
+          <li>Safe, consented campaigns (no credential harvesting)</li>
+          <li>Executive report + prioritized remediation</li>
+          <li>Recurring plans to track progress</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Router & Firewall Audit</h2>
+        <p>Automated configuration audits, secure backups, and prioritized fixes to secure your network edge devices.</p>
+        <ul>
+          <li>Config backup + vulnerability checks</li>
+          <li>Prioritized remediation checklist and one remediation ticket</li>
+          <li>Monthly monitoring options</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="pilot">
+      <h3>2‑Week Pilot — Get a Clear Report</h3>
+      <p>Run a 2‑week pilot: one phishing campaign (up to 50 targets) and one device audit. Deliverables: PDF reports, remediation checklist, and a 20–30 minute review call.</p>
+      <p class="price">Pilot price: <strong>$20</strong> (limited pilot spots)</p>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h4>Phishing — Bronze</h4>
+          <p>$50 / month</p>
+          <p>1 campaign / month, up to 50 targets, report + session</p>
+        </div>
+        <div class="price-card">
+          <h4>Router — Bronze</h4>
+          <p>$30 one-off or $25 / month</p>
+          <p>1 device audit, config backup, report</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how">
+      <h3>How it works</h3>
+      <ol>
+        <li><strong>Sign up & consent</strong> — Provide target list and device access.</li>
+        <li><strong>Run tests & collect data</strong> — Safe, consented campaigns and automated audits.</li>
+        <li><strong>Deliver report & training</strong> — Prioritized fixes and staff awareness session.</li>
+      </ol>
+    </section>
+
+    <section class="faq">
+      <h3>FAQ & Consent summary</h3>
+      <p><strong>Q:</strong> Will you harvest passwords? <strong>A:</strong> No. We do not collect credentials or PII.</p>
+      <p><strong>Q:</strong> Is this legal? <strong>A:</strong> Only with your written consent. We’ll provide a simple consent form.</p>
+      <p class="consent-note">All tests require signed consent. We will stop immediately on request.</p>
+    </section>
+
+    <section id="form" class="contact">
+      <h3>Request pilot</h3>
+
+      <!-- Netlify form -->
+      <form name="pilot-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return handleSubmit(event)">
+        <input type="hidden" name="form-name" value="pilot-request" />
+        <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          Company
+          <input type="text" name="company" />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Phone (WhatsApp)
+          <input type="tel" name="phone" required />
+        </label>
+
+        <label>
+          Service interested
+          <select name="service">
+            <option>Phishing</option>
+            <option>Router Audit</option>
+            <option>Both</option>
+          </select>
+        </label>
+
+        <label>
+          Short note
+          <textarea name="note" rows="3"></textarea>
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" name="consent" required />
+          I authorize this pilot and agree to receive the consent form.
+        </label>
+
+        <div class="form-row">
+          <button class="btn primary" type="submit">Request Pilot</button>
+          <a class="btn outline" target="_blank" rel="noopener" href="https://wa.me/254715460269?text=Hi%2C%20I%27d%20like%20to%20book%20a%20pilot.">Message on WhatsApp</a>
+        </div>
+
+        <div id="formMessage" class="hidden success">Thank you — we will contact you shortly.</div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Year Your Name / Company. All tests require client authorization. No credential harvesting. Contact: +254715460269</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
